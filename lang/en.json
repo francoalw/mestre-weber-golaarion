@@ -1,0 +1,41 @@
+{
+  "SKILLACTIONSGROUPS": {
+    "General": "General"
+  },
+  "NOTIFYUPDATES": {
+    "HpRecovered": "❤️ {name} recovered {amount} HP (now at {value}/{max}).",
+    "HpLost": "💢 {name} lost {amount} HP (now at {value}/{max}).",
+    "HeroPointsGained": "✨ {name} gained {amount} Hero Point(s) (now at {value}).",
+    "HeroPointsSpent": "💥 {name} spent {amount} Hero Point(s) (now at {value}).",
+    "FocusGained": "🧘 {name} recovered {amount} Focus Point(s) (now at {value}/{max}).",
+    "FocusSpent": "🧘 {name} spent {amount} Focus Point(s) (now at {value}/{max}).",
+    "SpellSlotRankSingular": "1 rank {rank} slot",
+    "SpellSlotRankPlural": "{amount} rank {rank} slots",
+    "SpellSlotsRecovered": "🔮 {name} recovered {details} of {item}.",
+    "SpellSlotsSpent": "🔮 {name} spent {details} of {item}.",
+    "FeatGained": "🗒️ {name} gained the feat {feat}.",
+    "FeatLost": "🗑️ {name} lost the feat {feat}.",
+    "ConditionGained": "🩹 {name} got the {condition} condition.",
+    "ConditionGainedValued": "🩹 {name} got the {condition} {value} condition.",
+    "ConditionLost": "✅ {name} no longer has the {condition} condition.",
+    "ConditionValueChanged": "🩹 {name}'s {condition} condition changed to {value}."
+  },
+  "NEXTTURNNOTIFY": {
+    "UpNext": "🔔 Get ready, {name}! Your turn is next."
+  },
+  "BOOKSRC": {
+    "ManageButton": "Choose allowed books",
+    "ManageButtonShort": "Books",
+    "Hint": "Check the books players are allowed to use at this table. With the filter enabled, players only see content from those books when creating a character, searching items, feats, spells, etc. (both in the system's browser and when opening compendiums directly) — the GM still sees everything as usual. Nothing is deleted; uncheck or disable at any time to restore full access.",
+    "Enable": "Enable book filter for players",
+    "ShowUnknown": "Show entries with no recognized source (e.g. homebrew content)",
+    "SearchPlaceholder": "Search books…",
+    "SelectAll": "Select all",
+    "SelectNone": "Select none",
+    "NoSources": "No books were found in the loaded compendiums.",
+    "Scanning": "Scanning compendiums for available books…",
+    "Saved": "Allowed books updated.",
+    "Save": "Save",
+    "Cancel": "Cancel"
+  }
+}

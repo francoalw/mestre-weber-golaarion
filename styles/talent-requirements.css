@@ -1,0 +1,9 @@
+.compendium-browser .result-list > li.mw-feat-unmet {
+  background: rgba(200, 30, 30, 0.16);
+  outline: 1px solid rgba(220, 40, 40, 0.55);
+  outline-offset: -1px;
+}
+
+.compendium-browser .result-list > li.mw-feat-unmet .name .result-link {
+  color: #ff6b6b;
+}

@@ -1,0 +1,44 @@
+/* Botão de escolher livros permitidos, ao lado de "Criar Compêndio" */
+.book-sources-manage-btn i {
+  margin-right: 0.2em;
+}
+
+.book-sources-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.3em 0;
+}
+
+.book-sources-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0.4em 0 0.6em;
+}
+
+.book-sources-search {
+  flex: 1;
+}
+
+.book-sources-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  max-height: 50vh;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 0.4em 0.6em;
+}
+
+.book-sources-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.15em 0;
+}
+
+.book-sources-row.book-sources-row-hidden {
+  display: none;
+}

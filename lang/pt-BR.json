@@ -1,0 +1,41 @@
+{
+  "SKILLACTIONSGROUPS": {
+    "General": "Geral"
+  },
+  "NOTIFYUPDATES": {
+    "HpRecovered": "❤️ {name} recuperou {amount} de vida (agora com {value}/{max}).",
+    "HpLost": "💢 {name} perdeu {amount} de vida (agora com {value}/{max}).",
+    "HeroPointsGained": "✨ {name} ganhou {amount} ponto(s) de heroísmo (agora com {value}).",
+    "HeroPointsSpent": "💥 {name} gastou {amount} ponto(s) de heroísmo (agora com {value}).",
+    "FocusGained": "🧘 {name} recuperou {amount} ponto(s) de foco (agora com {value}/{max}).",
+    "FocusSpent": "🧘 {name} gastou {amount} ponto(s) de foco (agora com {value}/{max}).",
+    "SpellSlotRankSingular": "1 slot de nível {rank}",
+    "SpellSlotRankPlural": "{amount} slots de nível {rank}",
+    "SpellSlotsRecovered": "🔮 {name} recuperou {details} de {item}.",
+    "SpellSlotsSpent": "🔮 {name} gastou {details} de {item}.",
+    "FeatGained": "🗒️ {name} ganhou o talento {feat}.",
+    "FeatLost": "🗑️ {name} perdeu o talento {feat}.",
+    "ConditionGained": "🩹 {name} ficou com a condição {condition}.",
+    "ConditionGainedValued": "🩹 {name} ficou com a condição {condition} {value}.",
+    "ConditionLost": "✅ {name} não está mais com a condição {condition}.",
+    "ConditionValueChanged": "🩹 {name} teve a condição {condition} alterada para {value}."
+  },
+  "NEXTTURNNOTIFY": {
+    "UpNext": "🔔 Prepare-se, {name}! Seu turno é o próximo."
+  },
+  "BOOKSRC": {
+    "ManageButton": "Escolher livros permitidos",
+    "ManageButtonShort": "Livros",
+    "Hint": "Marque os livros que os jogadores podem usar nesta mesa. Com o filtro ativado, os jogadores só veem conteúdo desses livros ao criar personagem, pesquisar itens, talentos, magias etc. (tanto no buscador do sistema quanto ao abrir os compêndios diretamente) — o Mestre continua vendo tudo normalmente. Nada é apagado; desmarque ou desative a qualquer momento para restaurar o acesso completo.",
+    "Enable": "Ativar filtro de livros para os jogadores",
+    "ShowUnknown": "Mostrar itens sem livro reconhecido (ex.: conteúdo homebrew)",
+    "SearchPlaceholder": "Pesquisar livros…",
+    "SelectAll": "Marcar todos",
+    "SelectNone": "Desmarcar todos",
+    "NoSources": "Nenhum livro foi encontrado nos compêndios carregados.",
+    "Scanning": "Lendo compêndios em busca dos livros disponíveis…",
+    "Saved": "Livros permitidos atualizados.",
+    "Save": "Salvar",
+    "Cancel": "Cancelar"
+  }
+}

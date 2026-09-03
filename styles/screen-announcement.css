@@ -1,0 +1,83 @@
+.mw-announce-particles {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+.mw-announce-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, var(--mw-announce-bg-mid, rgba(0, 0, 0, 0.55)) 45%, var(--mw-announce-bg-outer, rgba(0, 0, 0, 0.92)) 100%);
+    opacity: 0;
+    transition: opacity 2.2s ease;
+}
+
+.mw-announce-overlay.show {
+    opacity: 1;
+}
+
+.mw-announce-overlay-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: scale(0.97);
+    opacity: 0;
+    filter: blur(6px) drop-shadow(0 0 25px color-mix(in srgb, var(--mw-announce-glow-color, #821ebe) 65%, transparent));
+    transition: transform 2.6s ease-out, opacity 2.6s ease-in-out, filter 2.6s ease-out;
+}
+
+.mw-announce-overlay-text.reveal {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px) drop-shadow(0 0 25px color-mix(in srgb, var(--mw-announce-glow-color, #821ebe) 65%, transparent));
+}
+
+.mw-announce-overlay-text.fall {
+    transform: translateY(-120vh);
+    opacity: 1;
+    filter: drop-shadow(0 0 25px color-mix(in srgb, var(--mw-announce-glow-color, #821ebe) 65%, transparent));
+    transition: transform 5.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.mw-announce-overlay-text.fall.shimmer {
+    animation: mw-announce-shimmer 1.4s ease-in-out;
+}
+
+@keyframes mw-announce-shimmer {
+    0%, 100% {
+        filter: drop-shadow(0 0 25px color-mix(in srgb, var(--mw-announce-glow-color, #821ebe) 65%, transparent));
+    }
+    50% {
+        filter: drop-shadow(0 0 55px color-mix(in srgb, var(--mw-announce-shimmer-color, #d9b26a) 90%, transparent)) drop-shadow(0 0 25px color-mix(in srgb, var(--mw-announce-glow-color, #821ebe) 65%, transparent));
+    }
+}
+
+.mw-announce-overlay-title {
+    font-family: "Palatino Linotype", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 6rem);
+    line-height: 1.15;
+    max-width: 90vw;
+    letter-spacing: 0.1em;
+    color: var(--mw-announce-text-color, #d9b26a);
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, 0.9),
+        0 0 45px color-mix(in srgb, var(--mw-announce-glow-color, #821ebe) 85%, transparent),
+        0 0 90px color-mix(in srgb, var(--mw-announce-glow-color, #821ebe) 60%, transparent);
+}
+
+.mw-announce-overlay-sub {
+    margin-top: 0.8vw;
+    font-family: "Palatino Linotype", Georgia, serif;
+    font-style: italic;
+    font-size: 1.1vw;
+    color: var(--mw-announce-sub-color, #6a4a35);
+}
