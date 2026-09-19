@@ -28,7 +28,11 @@ function groupSkillActions(app, html) {
   );
   if (!header) return;
 
-  const list = header.nextElementSibling;
+  insertGroupedByNote(header);
+
+  // A nota fica entre o header e a lista — pula ela ao procurar a <ol> de verdade.
+  const afterHeader = header.nextElementSibling;
+  const list = afterHeader?.classList.contains("skill-actions-groups-note") ? afterHeader.nextElementSibling : afterHeader;
   if (!list || list.tagName !== "OL" || list.classList.contains("skill-actions-groups-processed")) return;
 
   const items = Array.from(list.children).filter((el) => el.tagName === "LI");
@@ -67,6 +71,14 @@ function groupSkillActions(app, html) {
   }
 
   list.replaceWith(wrapper);
+}
+
+function insertGroupedByNote(header) {
+  if (header.nextElementSibling?.classList.contains("skill-actions-groups-note")) return;
+  const note = document.createElement("div");
+  note.className = "skill-actions-groups-note";
+  note.innerHTML = game.i18n.localize("SKILLACTIONSGROUPS.GroupedByNote");
+  header.after(note);
 }
 
 function skillLabel(actor, key) {

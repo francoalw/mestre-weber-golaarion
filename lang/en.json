@@ -1,6 +1,7 @@
 {
   "SKILLACTIONSGROUPS": {
-    "General": "General"
+    "General": "General",
+    "GroupedByNote": "Grouped by category by the <strong>Mestre Weber – Golaarion</strong> module"
   },
   "NOTIFYUPDATES": {
     "HpRecovered": "❤️ {name} recovered {amount} HP (now at {value}/{max}).",
@@ -21,7 +22,7 @@
     "ConditionValueChanged": "🩹 {name}'s {condition} condition changed to {value}."
   },
   "NEXTTURNNOTIFY": {
-    "UpNext": "🔔 Get ready, {name}! Your turn is next."
+    "UpNext": "🔔 Get ready, {name}! Your turn is next. A.: Mestre Weber – Golaarion"
   },
   "BOOKSRC": {
     "ManageButton": "Choose allowed books",
@@ -37,5 +38,12 @@
     "Saved": "Allowed books updated.",
     "Save": "Save",
     "Cancel": "Cancel"
+  },
+  "REVEALLOC": {
+    "Button": "Reveal location",
+    "DialogTitle": "Reveal location",
+    "NameLabel": "Location name",
+    "Reveal": "Reveal",
+    "ApiMissing": "Could not trigger the announcement: the Golaarion module API isn't ready."
   }
 }

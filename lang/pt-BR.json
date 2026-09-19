@@ -1,6 +1,7 @@
 {
   "SKILLACTIONSGROUPS": {
-    "General": "Geral"
+    "General": "Geral",
+    "GroupedByNote": "Organizadas por categoria pelo módulo <strong>Mestre Weber – Golaarion</strong>"
   },
   "NOTIFYUPDATES": {
     "HpRecovered": "❤️ {name} recuperou {amount} de vida (agora com {value}/{max}).",
@@ -21,7 +22,7 @@
     "ConditionValueChanged": "🩹 {name} teve a condição {condition} alterada para {value}."
   },
   "NEXTTURNNOTIFY": {
-    "UpNext": "🔔 Prepare-se, {name}! Seu turno é o próximo."
+    "UpNext": "🔔 Prepare-se, {name}! Seu turno é o próximo. A.: Mestre Weber – Golaarion"
   },
   "BOOKSRC": {
     "ManageButton": "Escolher livros permitidos",
@@ -37,5 +38,12 @@
     "Saved": "Livros permitidos atualizados.",
     "Save": "Salvar",
     "Cancel": "Cancelar"
+  },
+  "REVEALLOC": {
+    "Button": "Revelar local",
+    "DialogTitle": "Revelar local",
+    "NameLabel": "Nome do local",
+    "Reveal": "Revelar",
+    "ApiMissing": "Não foi possível disparar o anúncio: a API do módulo Golaarion não está pronta."
   }
 }

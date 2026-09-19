@@ -67,27 +67,43 @@ Acesso: aba Compêndios → botão **Livros**, ao lado de "Criar Compêndio"
 
 ### 6. Anúncio dramático em tela cheia
 
-Um aviso de tela cheia com partículas flutuantes, texto animado e som, pensado
+Um aviso de tela cheia com partículas em espiral, texto animado e som, pensado
 para momentos marcantes: o grupo chega a um novo local, avança um marco da
-campanha, conclui um objetivo principal, etc.
+campanha, conclui um objetivo principal, etc. Enquanto dura, toda a UI do
+Foundry some — barra de cenas, hotbar, sidebar, lista de jogadores, controles
+de cena e qualquer janela aberta (inclusive fichas de personagem) — em cada
+cliente conectado, pra imersão total; tudo volta com fade-in assim que o
+anúncio termina. No lugar da hotbar (que fica escondida), aparece a
+assinatura "Mestre Weber – Golaarion", que some com o mesmo fade quando a UI
+volta.
 
 Cores (texto, brilho, lampejo, subtítulo, partículas), intensidade do
-escurecimento de fundo e animação padrão são configuráveis em Configurações do
+escurecimento de fundo, animação padrão e **som** (um único arquivo de áudio,
+escolhido pelo seletor de arquivos, tocado em todo anúncio — não dá pra
+escolher um som diferente por chamada) são configuráveis em Configurações do
 Mundo.
 
-O módulo vem com um compêndio de Macros com um exemplo pronto:
+Para o caso mais comum — revelar um novo local — não precisa de macro: um
+botão (ícone de mapa) aparece na barra de navegação de cenas, ao lado da lista
+de cenas, visível só para o Mestre. Ao clicar, um formulário pergunta o nome
+do local (a primeira letra de cada palavra é maiúscula automaticamente, não
+importa como foi digitado) e dispara o anúncio na hora, com o som configurado
+(se houver).
 
-- **Anúncio - Novo Local** (animação "fade suave")
+Junto com as partículas em espiral, os tokens dos personagens da Party
+marcada como principal (`game.actors.party`) também caem em espiral rumo ao
+centro da tela, meio transparentes até sumir de vez perto do fim do caminho —
+usa o token deles na cena atual, ou o retrato padrão se não tiverem token na
+cena.
 
-Edite o título, o subtítulo e, opcionalmente, o caminho de um som diretamente
-no comando do macro. Também é possível disparar o aviso via API, direto de
-outro macro ou script:
+Para outros momentos (marco, objetivo, etc.) ou para customizar
+subtítulo/animação, dispare o aviso via API, direto de um macro ou script (o
+som não entra aqui — é sempre o único configurado em Configurações do Mundo):
 
 ```js
 game.modules.get("mestre-weber-golaarion").api.showAnnouncement(
   title,       // texto principal (obrigatório)
   subtitle,    // subtítulo opcional, ou "" / null
-  sound,       // caminho de um som (ex.: "sounds/ambient/wind.ogg"), ou "" / null
   animation,   // "reveal" (fade suave) ou "fall" (queda do alto); opcional, usa o padrão configurado
   duration,    // duração total em ms; opcional
   soundDelay,  // atraso antes de tocar o som, em ms; opcional
@@ -97,6 +113,15 @@ game.modules.get("mestre-weber-golaarion").api.showAnnouncement(
 
 O aviso é exibido para **todos os jogadores conectados** (via socket do
 Foundry), não só para quem chamou a API.
+
+### 7. Resumo ao iniciar o mundo
+
+Assim que o mundo termina de carregar, o Mestre recebe um sussurro no chat
+listando o estado de cada função acima nessa sessão: se as Subcategorias por
+perícia estão ativas (depende do PF2e Skill Actions estar ativo), se a
+Notificação de turno está ligada e com qual volume, se há restrição de Livros
+permitidos, e qual a animação padrão do Anúncio de tela. Só o Mestre vê essa
+mensagem.
 
 ## Origem
 

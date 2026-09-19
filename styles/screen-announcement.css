@@ -1,9 +1,38 @@
 .mw-announce-particles {
     position: fixed;
     inset: 0;
-    z-index: 99999;
+    z-index: 99998;
     pointer-events: none;
     mix-blend-mode: screen;
+}
+
+/* Sem "mix-blend-mode: screen" — esse blend é aditivo (bom pras partículas brilharem
+   feito luz), mas nunca deixa nada parecer sólido/opaco de verdade, nem com alpha 1.
+   Os tokens precisam ficar num canvas separado, com blend normal, pra aparecer opacos. */
+.mw-announce-tokens {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+/* Assinatura que ocupa o lugar da hotbar (escondida) durante o anúncio. Posição/tamanho
+   vêm do getBoundingClientRect() do próprio #hotbar, aplicados inline via JS. */
+.mw-announce-hotbar-label {
+    position: fixed;
+    z-index: 99997;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-family: "Palatino Linotype", Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: 1rem;
+    color: var(--mw-announce-text-color, #d9b26a);
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, 0.9),
+        0 0 20px color-mix(in srgb, var(--mw-announce-glow-color, #821ebe) 60%, transparent);
 }
 
 .mw-announce-overlay {

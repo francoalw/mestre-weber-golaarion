@@ -1,10 +1,10 @@
 {
   "id": "mestre-weber-golaarion",
   "title": "Mestre Weber – Golaarion",
-  "description": "Conjunto de ajustes para o sistema PF2e: subcategorias por perícia para o módulo PF2e Skill Actions, um destaque vermelho nos talentos que um personagem não cumpre os requisitos para pegar ao pesquisar na aba Talentos do Buscador de Compêndio pela própria ficha, um sussurro automático ao Mestre no chat sempre que um jogador altera a própria ficha (vida recuperada ou perdida, pontos de heroísmo e de foco ganhos ou gastos, slots de magia recuperados ou gastos, talentos ganhos ou perdidos e condições ganhas, perdidas ou com valor alterado), uma notificação de turno (UI + sonzinho discreto) para o jogador dono do personagem assim que chega a vez dele em combates com mais de 2 participantes, a escolha dos livros permitidos na mesa (restringe, para os jogadores, quais livros aparecem na criação de personagem e nas buscas de item/talento/etc., sem apagar nenhum compêndio), e um aviso dramático em tela cheia (partículas, texto e som, com cores e animação configuráveis) que o Mestre pode disparar via macro ou API para momentos marcantes: chegar a um novo local, avançar um marco, concluir um objetivo, etc. Vem com um macro pronto de exemplo (\"Anúncio - Novo Local\") num compêndio de Macros.",
-  "version": "1.0.0",
+  "description": "Conjunto de ajustes para o sistema PF2e: subcategorias por perícia para o módulo PF2e Skill Actions, um destaque vermelho nos talentos que um personagem não cumpre os requisitos para pegar ao pesquisar na aba Talentos do Buscador de Compêndio pela própria ficha, um sussurro automático ao Mestre no chat sempre que um jogador altera a própria ficha (vida recuperada ou perdida, pontos de heroísmo e de foco ganhos ou gastos, slots de magia recuperados ou gastos, talentos ganhos ou perdidos e condições ganhas, perdidas ou com valor alterado), uma notificação de turno (UI + sonzinho discreto) para o jogador dono do personagem assim que chega a vez dele em combates com mais de 2 participantes, a escolha dos livros permitidos na mesa (restringe, para os jogadores, quais livros aparecem na criação de personagem e nas buscas de item/talento/etc., sem apagar nenhum compêndio), um aviso dramático em tela cheia (partículas, texto e som, com cores e animação configuráveis) para momentos marcantes: chegar a um novo local, avançar um marco, concluir um objetivo, etc. — disparável via API para casos gerais, e com um botão dedicado \"Revelar local\" na barra de navegação de cenas (só pro Mestre) que já pergunta o nome do local e dispara o anúncio, sem precisar de macro. Ao carregar o mundo, sussurra ao Mestre um resumo do estado de cada uma dessas features.",
+  "version": "1.1.0",
   "manifest": "https://github.com/francoalw/mestre-weber-golaarion/releases/latest/download/module.json",
-  "download": "https://github.com/francoalw/mestre-weber-golaarion/releases/download/v1.0.0/module.zip",
+  "download": "https://github.com/francoalw/mestre-weber-golaarion/releases/latest/download/module.zip",
   "socket": true,
   "compatibility": {
     "minimum": "13",
@@ -52,29 +52,19 @@
     "scripts/notify-player-updates/main.js",
     "scripts/next-turn-notify/main.js",
     "scripts/book-sources/main.js",
-    "scripts/screen-announcement/main.js"
+    "scripts/screen-announcement/main.js",
+    "scripts/reveal-location/main.js",
+    "scripts/startup-summary/main.js"
   ],
   "styles": [
     "styles/skill-actions-groups.css",
     "styles/talent-requirements.css",
     "styles/book-sources.css",
-    "styles/screen-announcement.css"
+    "styles/screen-announcement.css",
+    "styles/reveal-location.css"
   ],
   "languages": [
     { "lang": "pt-BR", "name": "Português (Brasil)", "path": "lang/pt-BR.json" },
     { "lang": "en", "name": "English", "path": "lang/en.json" }
-  ],
-  "packs": [
-    {
-      "name": "macros-anuncios",
-      "label": "Macros - Anúncios de Tela (Golaarion)",
-      "path": "packs/macros-anuncios",
-      "type": "Macro",
-      "ownership": {
-        "PLAYER": "NONE",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    }
   ]
 }

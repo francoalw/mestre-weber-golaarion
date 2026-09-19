@@ -1,0 +1,35 @@
+/* Botão de revelar local, ao lado do card da cena atual na barra de navegação.
+   Posicionamento 100% explícito (sem herdar nada do core) — "position: static" força
+   ele a ficar no fluxo normal da lista, em vez de escapar pra outro canto da tela. */
+.mw-reveal-location-item {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  /* A barra de cenas do core parece restringir cliques só aos itens ".scene" de
+     verdade — sem isso, o item novo herdava "pointer-events: none" e virava decoração
+     (sem hover, sem clique, sem erro nenhum). */
+  pointer-events: auto;
+}
+
+.mw-reveal-location-btn {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 2em;
+  height: 2em;
+  margin: 0 0.25em;
+  border: 1px solid var(--mw-announce-text-color, #d9b26a);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--mw-announce-text-color, #d9b26a);
+  cursor: pointer;
+}
+
+.mw-reveal-location-btn:hover {
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 6px var(--mw-announce-glow-color, #821ebe);
+}
