@@ -69,7 +69,9 @@ function findResultListContainer(app) {
   return null;
 }
 
-function tryAttachObserver(attemptsLeft = 60) {
+// 300 tentativas (~5s a 60fps) para cobrir a primeira abertura do Buscador de Compêndio numa
+// sessão, quando o PF2e ainda está indexando todos os compêndios e pode demorar mais que 1s.
+function tryAttachObserver(attemptsLeft = 300) {
   const app = game.pf2e?.compendiumBrowser;
   const container = findResultListContainer(app);
   if (container) {
