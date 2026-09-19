@@ -1,0 +1,7 @@
+[data-athletics-attacks-block] {
+  display: contents;
+}
+
+.athletics-attacks-list li.strike .name {
+  cursor: default;
+}

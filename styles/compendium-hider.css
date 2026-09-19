@@ -1,0 +1,39 @@
+/* Botão de gerenciar compêndios ocultos, ao lado de "Criar Compêndio" */
+.compendium-hider-manage-btn i {
+  margin-right: 0.2em;
+}
+
+.compendium-hider-search {
+  width: 100%;
+  margin: 0.3em 0 0.6em;
+}
+
+.compendium-hider-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.compendium-hider-group {
+  margin: 0;
+  padding: 0.4em 0.6em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.compendium-hider-group.compendium-hider-group-hidden {
+  display: none;
+}
+
+.compendium-hider-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.15em 0;
+}
+
+.compendium-hider-row.compendium-hider-row-hidden {
+  display: none;
+}

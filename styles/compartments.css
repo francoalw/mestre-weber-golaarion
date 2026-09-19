@@ -1,0 +1,123 @@
+/* Botão de gerenciar compartimentos, ao lado da busca do inventário */
+.inventory-header .search {
+  flex: 1;
+}
+
+.compartment-manage-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  margin-left: 0.4em;
+  border-radius: 3px;
+  color: var(--color-text-dark-secondary, #4b4a44);
+}
+
+.compartment-manage-btn:hover {
+  color: var(--color-text-dark-primary, #191813);
+  text-shadow: none;
+}
+
+/* Seletor de compartimento em cada linha de item */
+select.compartment-picker {
+  max-width: 8em;
+  font-size: 0.75em;
+  margin-right: 0.3em;
+  height: 1.6em;
+  border-radius: 3px;
+}
+
+/* Grupo de compartimento dentro da lista de itens */
+li.compartment-group {
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 0.2em 0;
+  background: rgba(0, 0, 0, 0.02);
+  /* Sem isso, um clique-arrasto que não pega exatamente em cima do item
+     vira uma seleção de texto do navegador (fica tudo "pintado" de azul)
+     em vez de iniciar o drag do item para fora da pasta. */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+li.compartment-group.drag-over {
+  background: rgba(0, 128, 0, 0.08);
+  border-color: rgba(0, 128, 0, 0.4);
+}
+
+.compartment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+
+.compartment-header:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.compartment-caret {
+  transition: transform 0.1s ease-in-out;
+  font-size: 0.75em;
+}
+
+li.compartment-group:not(.collapsed) .compartment-caret {
+  transform: rotate(90deg);
+}
+
+.compartment-name {
+  flex: 1;
+}
+
+.compartment-count {
+  font-weight: normal;
+  opacity: 0.7;
+  font-size: 0.85em;
+}
+
+ul.compartment-contents {
+  list-style: none;
+  margin: 0;
+  padding-left: 0.75em;
+}
+
+li.compartment-group.collapsed ul.compartment-contents {
+  display: none;
+}
+
+/* Diálogo de gerenciamento */
+.inventory-compartments-manage-form .compartment-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  margin-bottom: 0.75em;
+}
+
+.inventory-compartments-manage-form .compartment-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+}
+
+.inventory-compartments-manage-form .compartment-row label:first-child {
+  flex: 1;
+  margin: 0;
+}
+
+.inventory-compartments-manage-form .compartment-delete {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  color: #8b1e1e;
+}
+
+.inventory-compartments-manage-form .compartment-add {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 0.5em;
+}

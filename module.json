@@ -1,8 +1,8 @@
 {
   "id": "mestre-weber-golaarion",
   "title": "Mestre Weber – Golaarion",
-  "description": "Conjunto de ajustes para o sistema PF2e: subcategorias por perícia para o módulo PF2e Skill Actions, um destaque vermelho nos talentos que um personagem não cumpre os requisitos para pegar ao pesquisar na aba Talentos do Buscador de Compêndio pela própria ficha, um sussurro automático ao Mestre no chat sempre que um jogador altera a própria ficha (vida recuperada ou perdida, pontos de heroísmo e de foco ganhos ou gastos, slots de magia recuperados ou gastos, talentos ganhos ou perdidos e condições ganhas, perdidas ou com valor alterado), uma notificação de turno (UI + sonzinho discreto) para o jogador dono do personagem assim que chega a vez dele em combates com mais de 2 participantes, a escolha dos livros permitidos na mesa (restringe, para os jogadores, quais livros aparecem na criação de personagem e nas buscas de item/talento/etc., sem apagar nenhum compêndio), um aviso dramático em tela cheia (partículas, texto e som, com cores e animação configuráveis) para momentos marcantes: chegar a um novo local, avançar um marco, concluir um objetivo, etc. — disparável via API para casos gerais, e com um botão dedicado \"Revelar local\" na barra de navegação de cenas (só pro Mestre) que já pergunta o nome do local e dispara o anúncio, sem precisar de macro. Ao carregar o mundo, sussurra ao Mestre um resumo do estado de cada uma dessas features.",
-  "version": "1.1.0",
+  "description": "Conjunto de ajustes para o sistema PF2e: subcategorias por perícia para o módulo PF2e Skill Actions, um destaque vermelho nos talentos que um personagem não cumpre os requisitos para pegar ao pesquisar na aba Talentos do Buscador de Compêndio pela própria ficha, um sussurro automático ao Mestre no chat sempre que um jogador altera a própria ficha (vida recuperada ou perdida, pontos de heroísmo e de foco ganhos ou gastos, slots de magia recuperados ou gastos, talentos ganhos ou perdidos e condições ganhas, perdidas ou com valor alterado), uma notificação de turno (UI + sonzinho discreto) para o jogador dono do personagem assim que chega a vez dele em combates com mais de 2 participantes, a escolha dos livros permitidos na mesa (restringe, para os jogadores, quais livros aparecem na criação de personagem e nas buscas de item/talento/etc., sem apagar nenhum compêndio), um aviso dramático em tela cheia (partículas, texto e som, com cores e animação configuráveis) para momentos marcantes: chegar a um novo local, avançar um marco, concluir um objetivo, etc. — disparável via API para casos gerais, e com um botão dedicado \"Revelar local\" na barra de navegação de cenas (só pro Mestre) que já pergunta o nome do local e dispara o anúncio, sem precisar de macro. Um máximo configurável de Pontos Heróicos (1 a 10, padrão 5) para personagens não-Míticos, compartimentos de inventário (pastas virtuais na aba Inventário para organizar itens sem afetar bulk), as manobras de Atletismo com o traço Ataque (Agarrar, Derrubar, Desarmar, Empurrar, Reposicionar) na aba Ações com botões de rolagem incluindo a Penalidade de Ataques Múltiplos, uma ferramenta de Terreno Difícil na aba Região dos Controles de Cena, e uma opção para o Mestre ocultar compêndios do sistema/módulos da aba Compêndios sem apagar nada foram absorvidos do módulo público mestre-weber-pf2e, descontinuado. Ao carregar o mundo, sussurra ao Mestre um resumo do estado de cada uma dessas features.",
+  "version": "1.2.0",
   "manifest": "https://github.com/francoalw/mestre-weber-golaarion/releases/latest/download/module.json",
   "download": "https://github.com/francoalw/mestre-weber-golaarion/releases/latest/download/module.zip",
   "socket": true,
@@ -54,6 +54,11 @@
     "scripts/book-sources/main.js",
     "scripts/screen-announcement/main.js",
     "scripts/reveal-location/main.js",
+    "scripts/hero-points-max/main.js",
+    "scripts/inventory-compartments/main.js",
+    "scripts/athletics-attacks/main.js",
+    "scripts/difficult-terrain/main.js",
+    "scripts/compendium-hider/main.js",
     "scripts/startup-summary/main.js"
   ],
   "styles": [
@@ -61,7 +66,10 @@
     "styles/talent-requirements.css",
     "styles/book-sources.css",
     "styles/screen-announcement.css",
-    "styles/reveal-location.css"
+    "styles/reveal-location.css",
+    "styles/compartments.css",
+    "styles/athletics-attacks.css",
+    "styles/compendium-hider.css"
   ],
   "languages": [
     { "lang": "pt-BR", "name": "Português (Brasil)", "path": "lang/pt-BR.json" },

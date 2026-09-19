@@ -45,5 +45,45 @@
     "NameLabel": "Location name",
     "Reveal": "Reveal",
     "ApiMissing": "Could not trigger the announcement: the Golaarion module API isn't ready."
+  },
+  "INVCOMP": {
+    "ManageCompartments": "Manage compartments",
+    "AssignCompartment": "Assign compartment",
+    "NoCompartment": "— No compartment —",
+    "NewCompartmentOption": "+ New compartment…",
+    "NewCompartment": "New compartment",
+    "NewCompartmentName": "Compartment name",
+    "NewCompartmentNamePlaceholder": "e.g. Wands",
+    "NoCompartmentsYet": "No compartments created yet.",
+    "Create": "Create",
+    "Save": "Save",
+    "Cancel": "Cancel",
+    "Delete": "Delete"
+  },
+  "ATHLETICSATK": {
+    "SectionHeader": "Athletics Maneuvers",
+    "RowSubtitle": "{skill} • DC {save}",
+    "Configure": {
+      "Label": "Show Athletics Maneuvers",
+      "Hint": "Shows, on the Actions tab, the Athletics maneuvers with the Attack trait (Grapple, Trip, Disarm, Shove, Reposition) with roll buttons that include the Multiple Attack Penalty."
+    },
+    "Maneuvers": {
+      "grapple": "Grapple",
+      "trip": "Trip",
+      "disarm": "Disarm",
+      "shove": "Shove",
+      "reposition": "Reposition"
+    }
+  },
+  "COMPHIDE": {
+    "ManageButton": "Manage hidden compendiums",
+    "ManageButtonShort": "Hide",
+    "Hint": "Foundry doesn't allow truly deleting compendiums owned by the system or by modules (they live inside the system's install and would come back on the next update). Check the ones below to hide them from the Compendium list — for everyone at the table, not just you. Nothing is deleted; uncheck at any time to bring it back.",
+    "GroupSystem": "System",
+    "GroupModule": "Modules",
+    "GroupWorld": "World",
+    "SearchPlaceholder": "Search compendiums…",
+    "Save": "Save",
+    "Cancel": "Cancel"
   }
 }

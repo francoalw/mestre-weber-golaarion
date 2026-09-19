@@ -42,6 +42,26 @@ function printStartupSummary() {
     `<strong>Anúncio de tela</strong>: botão "Revelar local" na barra de cenas pronto, e disparo via API pra outros casos (animação padrão: ${animation})`
   );
 
+  const maxHeroPoints = game.settings.get(MODULE_ID, "maxHeroPoints");
+  items.push(`<strong>Máximo de Pontos Heróicos</strong>: ${maxHeroPoints}`);
+
+  items.push("<strong>Compartimentos de Inventário</strong>: ativo (pastas virtuais na aba Inventário)");
+
+  items.push(
+    "<strong>Manobras de Atletismo como Ataques</strong>: ativo por padrão na aba Ações (pode ser desativado por personagem em Configure Character)"
+  );
+
+  items.push(
+    '<strong>Terreno Difícil</strong>: botão "Desenhar Terreno Difícil" disponível na aba Região dos Controles de Cena'
+  );
+
+  const hiddenPacks = game.settings.get(MODULE_ID, "hiddenCompendiums") ?? [];
+  items.push(
+    hiddenPacks.length
+      ? `<strong>Ocultar compêndios</strong>: ${hiddenPacks.length} compêndio(s) escondido(s) da aba Compêndios`
+      : "<strong>Ocultar compêndios</strong>: nenhum compêndio escondido"
+  );
+
   const content = `
     <div class="mw-golaarion-startup">
       <p><strong>Mestre Weber – Golaarion</strong> carregado neste mundo:</p>
